@@ -1,7 +1,6 @@
 // src/services/api.ts
 const BASE_URL = 'http://localhost:5000/api';
 
-// --- ADD INTERFACES FOR TYPE SAFETY ---
 interface AuthFormData {
   name?: string;
   email: string;
@@ -29,8 +28,6 @@ export const api = {
     if (!response.ok) throw new Error('Login failed');
     return response.json();
   },
-  
-  // --- ADD THIS FUNCTION ---
   register: async (formData: AuthFormData): Promise<AuthResponse> => {
     const response = await fetch(`${BASE_URL}/auth/register`, {
       method: 'POST',

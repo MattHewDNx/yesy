@@ -1,5 +1,6 @@
 // src/context/AuthContext.tsx
-import { createContext, useState, useContext, ReactNode } from 'react';
+import { createContext, useState, useContext } from 'react';
+import type { ReactNode } from 'react'; // Import ReactNode as a type
 
 // Define the shape of the context data
 interface AuthContextType {
